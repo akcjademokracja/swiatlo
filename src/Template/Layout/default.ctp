@@ -13,4 +13,29 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-require 'webroot' . DIRECTORY_SEPARATOR . 'index.php';
+$cakeDescription = 'CakePHP: the rapid development php framework';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <?= $this->Html->charset() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Łańcuch Światła
+    </title>
+    <?= $this->Html->meta('icon') ?>
+ 
+
+    <?= $this->fetch('meta') ?>
+     <?= $this->fetch('script') ?>
+</head>
+<body>
+   
+    <?= $this->Flash->render() ?>
+    <div class="container-fluid">
+        <?= $this->fetch('content') ?>
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>
