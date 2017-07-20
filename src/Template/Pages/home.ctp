@@ -129,9 +129,9 @@ js.src = "http://connect.facebook.net/en_US/all.js";
 <div class="row justify-content-center grid"> 
 
 <?php foreach ($streams as $stream) { if (count($streams)<9) { $lg=6; } else { $lg=4; } if ($_GET['small']==1) { $lg=4; }  ?>
-<div class="col-lg-<?=$lg?> col-md-6 col-12 grid-item" style="display:block; padding-left:0px; padding-right: 0px">
-	<div class="videoWrap"><div class="videoTitle"><?=$stream['name']?></div>
-	<div class="fb-video" data-href="<?=$stream['address']?>" data-show-text="false" data-autoplay="true">
+<div class="col-lg-<?php echo $lg; ?> col-md-6 col-12 grid-item" style="display:block; padding-left:0px; padding-right: 0px">
+	<div class="videoWrap"><div class="videoTitle"><?php echo $stream['name']; ?></div>
+	<div class="fb-video" data-href="<?php echo $stream['address']; ?>" data-show-text="false" data-autoplay="true">
  	</div>
 </div></div>
 <?php }; ?></div>
@@ -235,7 +235,7 @@ $(document).ready(function() {
 })
 function sendForm() { 
 	
-	 var dane=$("#dodajForm").serialize()+'&funkcja=useradd&sid=<?=$sid?>&xdbf=<?=$xdbf?>';
+	 var dane=$("#dodajForm").serialize()+'&funkcja=useradd&sid=<?php echo $sid; ?>&xdbf=<?php echo $xdbf; ?>';
 
  $.ajax({
  				type: "post",
