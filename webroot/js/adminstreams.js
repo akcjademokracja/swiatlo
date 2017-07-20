@@ -141,11 +141,10 @@ function zapiszStreamy() {
 				data: dane, 
 				dataType: 'json',
 				beforeSend: function() {
-				  	$("#zapiszdodane").button('loading').addClass('btn-primary');
+					$("#zapiszdodane").button('complete').attr('onclick', 'javascript:window.location.reload()');
 				},
 				success: function(dane1){ 
-					$("#zapiszdodane").button('complete').attr('onclick', 'javascript:window.location.reload()');
- 				 }} );   
+  				 }} );   
     
     
 }
