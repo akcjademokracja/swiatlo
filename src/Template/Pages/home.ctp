@@ -103,16 +103,7 @@ font-size:10px;
     <span class="navbar-toggler-icon"></span>
   </button>
    <h1 class="navbar-brand mb-0">#ŁańcuchŚwiatła <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
-<div class="switches">
-	 <select class="selectpicker" id="selectPieces">
-  <option>Wszystkie transmisje</option>
-  <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
-   <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?$i?>"><?$i?></option><? }; ?> 
-</select>
- 
-		 
-		 
-	 </div><? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
+<? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
 	 <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
@@ -294,7 +285,16 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
   </div>
 </div>
 
-
+<div class="switches">
+	 <select class="selectpicker" id="selectPieces">
+  <option>Wszystkie transmisje</option>
+  <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
+   <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?$i?>"><?$i?></option><? }; ?> 
+</select>
+ 
+		 
+		 
+	 </div>
 
 
 
