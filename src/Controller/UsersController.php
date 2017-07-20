@@ -17,8 +17,7 @@
 use App\Controller\AppController;
 use Cake\Event\Event;
 use Cake\Datasource\ConnectionManager; // This line is required
-use Cake\Event\Event;
-
+ 
 class UsersController extends AppController
 {
 
