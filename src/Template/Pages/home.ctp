@@ -268,10 +268,10 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
 <div class="row justify-content-center grid"> 
 
 <?php  foreach ($streams as $index=>$stream) { $lg=4; if ($streamsow<9) { $lg=6; } else { $lg=4; } if ($_GET['small']==1) { $lg=4; }  ?>
-<div class="col-lg-<?php echo $lg; ?> col-md-6 col-12 grid-item <? if ($index>10) { echo 'inactive'; } ?>" style="">
+<div class="col-lg-<?php echo $lg; ?> col-md-6 col-12 grid-item" style="">
 	<div class="videoWrap"><div class="videoTitle"><?php echo $stream['name']; ?></div>
 	<div class="fb-video" data-href="<?php echo $stream['address']; ?>" data-show-text="false" data-autoplay="false">
- 	</div>
+ </div>
 </div></div>
 <?php }; ?></div>
  </div>
