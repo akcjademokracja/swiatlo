@@ -112,7 +112,7 @@ font-size:10px;
    <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">#ŁańcuchŚwiatła</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
    <div class="switches">
 	 <select class="form-control" id="selectPieces">
-  <option>Wszystkie transmisje</option>
+  <option value="">Wszystkie transmisje</option>
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
    <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?=$i?>"><?=$i?></option><? }; ?> 
 </select>
@@ -262,7 +262,9 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
         </button>
          </div>
 	        <div class="modal-body" id="dodajModalBody">
-		       <h5 style="font-weight: 300">Wklej poniżej adres transmisji LIVE na facebooku (pełny adres np. https://www.facebook.com/AkcjaDemokracja/videos/529232293867019 ) oraz miasto/lokalizację Łańcucha i kliknij DODAJ</h5><br/>
+		       <h5 style="font-weight: 300">Wklej poniżej adres transmisji LIVE na facebooku (pełny adres np. https://www.facebook.com/AkcjaDemokracja/videos/529232293867019 ) oraz miasto/lokalizację Łańcucha i kliknij DODAJ</h5><br/><strong>
+		       
+		       </strong>
 		       <br/>
 		       <form id="dodajForm" action="javascript:sendForm()">
 			       <label for="address">Adres <small>(z https://)</small></label>
