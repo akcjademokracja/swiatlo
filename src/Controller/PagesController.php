@@ -65,10 +65,12 @@ class PagesController extends AppController
 }
 */
 		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
+    Cache::write('ilestreams', $ilestreams);
 
 		$this->set('ilestreams', $ilestreams);
 		
 					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
+     Cache::write('streams', $streams);
 
 /*
 		$streams = Cache::read('streams');
@@ -84,9 +86,10 @@ else {
 */
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); $streamsow=$streams->count(); }
 		$this->set('streams', $streams);   
- 		$streamsow=$streams->count();
+/*
+		$streamsow=$streams->count();
 		$this->set('streamsow', $streamsow); 
-     if (!empty($path[0])) {
+*/     if (!empty($path[0])) {
             $page = $path[0];
         }
         if (!empty($path[1])) {
