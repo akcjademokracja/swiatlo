@@ -52,7 +52,11 @@ class PagesController extends AppController
         $page = $subpage = null;
 		$this->loadModel('Streams');
 		if ($_GET['pion']==1) { $where=''; } else { $where='Streams.active=1';};
-		$streams=$this->Streams->find()->where(''.$where.'')->order('Streams.kolejnosc asc');
+		if ($_GET['random']) { $order='RAND()'; } else { 
+			$order='Streams.kolejnosc asc';
+		}
+		$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
+		if ($_GET['streams']) { $streams->limit($_GET['streams']); }
 		$this->set('streams', $streams);
         if (!empty($path[0])) {
             $page = $path[0];

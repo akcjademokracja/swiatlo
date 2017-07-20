@@ -302,6 +302,11 @@ $('.selectpicker').selectpicker({
  style:'btn-secondary btn-sm'
 });
 
+$("#selectPieces").on('change', function() { 
+	streams=$(this).val();
+	random=$("#random").val();
+	window.location.href="/?streams="+streams+"&random="+random;
+})
 })
 function sendForm() { 
 	
