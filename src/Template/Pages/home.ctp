@@ -102,7 +102,7 @@ font-size:10px;
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-   <h1 class="navbar-brand mb-0">#ŁańcuchŚwiatła <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
+   <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">#ŁańcuchŚwiatła</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
 <? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
 	 <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
 
@@ -196,7 +196,7 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
    
 
  </script>
- <div class="container-fluid" style="margin-top: 70px;">
+ <div class="container-fluid" style="margin-top: 70px;" id="top">
 	 
 <div class="row justify-content-center grid"> 
 
