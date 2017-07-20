@@ -96,6 +96,12 @@ font-size:10px;
 #kontaktModalShow {
 	cursor: pointer;
 }
+#selectPieces {
+	background:transparent;
+	border:1px solid #000;
+	height:30px;
+	width:150px;
+}
 </style>
 
 <nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded" style="padding: 0px 15px; background:#fff;">
@@ -107,7 +113,7 @@ font-size:10px;
 	 <select class="form-control" id="selectPieces">
   <option>Wszystkie transmisje</option>
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
-   <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?$i?>"><?$i?></option><? }; ?> 
+   <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?=$i?>"><?=$i?></option><? }; ?> 
 </select>
  
 		 
