@@ -332,6 +332,8 @@ $(document).ready(function() {
 $('.selectpicker').selectpicker({
  style:'btn-secondary btn-sm'
 });
+$('.selectpicker').selectpicker('refresh');
+ 
 
 $("#selectPieces").on('change', function() { 
 	streams=$(this).val();
