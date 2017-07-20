@@ -1,20 +1,4 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,13 +7,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <title>
         Łańcuch Światła
     </title>
-    <?= $this->Html->meta('icon') ?>
- 
+ 	
+	<meta name="description" content="Idea Łańcucha Światła rozlewa się po całej Polsce. W niedzielę i we wtorek głos setek tysięcy osób wybrzmiał w kilkudziesięciu miejscowościach w całej Polsce. Choć większość uwagi koncentrowała się na tym co działo się pod Pałacem Prezydenckim, sukces nie byłby możliwości dzięki mobilizacji obywatelek i obywateli w miasteczkach i miastach. 
 
-    <?= $this->fetch('meta') ?>
-     <?= $this->fetch('script') ?>
-</head>
-<body>
+W czwartek chcemy wysunąć je na pierwszy plan. Wolne sądy to nie sprawa tylko Warszawy, ale wszystkich obywateli. To nie spór o władzę, a o to czy w sądach, zarówno tych mniejszych, rejonowych, jak i apelacyjnych, będą zapadać wyroki wolne od politycznych nacisków. 
+
+Dlatego w czwartek o 21:00 zbieramy się w całej Polsce. Bierzemy ze sobą świeczki i tworzymy wielki Łańcuch Światła. Gromadzimy się pod dwoma hasłami: Chcemy Weta i Wolne Sądy. Nie zabieramy emblematów partii i organizacji politycznych.">
+ 	
+	<meta property="og:title" content="Łańcuch Światła">  
+ 	<meta property="og:type" content="website"/> 
+ 
+	<meta property="og:url" content="https://lancuchswiatla.pl"/> 
+<meta property="og:description" content="Idea Łańcucha Światła rozlewa się po całej Polsce. W niedzielę i we wtorek głos setek tysięcy osób wybrzmiał w kilkudziesięciu miejscowościach w całej Polsce. Choć większość uwagi koncentrowała się na tym co działo się pod Pałacem Prezydenckim, sukces nie byłby możliwości dzięki mobilizacji obywatelek i obywateli w miasteczkach i miastach. 
+
+W czwartek chcemy wysunąć je na pierwszy plan. Wolne sądy to nie sprawa tylko Warszawy, ale wszystkich obywateli. To nie spór o władzę, a o to czy w sądach, zarówno tych mniejszych, rejonowych, jak i apelacyjnych, będą zapadać wyroki wolne od politycznych nacisków. 
+
+Dlatego w czwartek o 21:00 zbieramy się w całej Polsce. Bierzemy ze sobą świeczki i tworzymy wielki Łańcuch Światła. Gromadzimy się pod dwoma hasłami: Chcemy Weta i Wolne Sądy. Nie zabieramy emblematów partii i organizacji politycznych.">
+  
+ 	<?php echo $this->Html->charset(); ?>
+	 
+
+
+ <body>
    
     <?= $this->Flash->render() ?>
     <div class="container-fluid">
