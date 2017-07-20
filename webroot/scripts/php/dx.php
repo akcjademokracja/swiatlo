@@ -1,4 +1,4 @@
-<? ini_set('session.cookie_domain', ".nowosz.com"); 
+<? ini_set('session.cookie_domain', ".lancuchswiatla.pl"); 
 
 session_id($_POST['sid']);
 session_start();
