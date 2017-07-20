@@ -319,6 +319,14 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
 	}
 	</style>
 <script>
+	$(window).load(function(){
+   if(typeof window.FB == 'undefined'){
+       alert('Usuń blokery');
+   }
+   else{
+	   
+   }
+});
 	/*!
  * Masonry PACKAGED v4.2.0
  * Cascading grid layout library
