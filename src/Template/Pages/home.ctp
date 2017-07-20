@@ -98,14 +98,12 @@ font-size:10px;
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-   <h1 class="navbar-brand mb-0">#ŁancuchŚwiatła <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
+   <h1 class="navbar-brand mb-0">#ŁańcuchŚwiatła <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
 <div class="switches">
 	 <select class="selectpicker" id="selectPieces">
   <option>Wszystkie transmisje</option>
-   <option <?php if ($_GET['streams']==6) { echo 'selected'; }; ?> value="6">6</option>
-  <option <?php if ($_GET['streams']==12) { echo 'selected'; }; ?> value="12">12</option>
-  <option <?php if ($_GET['streams']==18) { echo 'selected'; }; ?> value="18">18</option>
-  <option <?php if ($_GET['streams']==24) { echo 'selected'; }; ?> value="24">24</option>
+  <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
+   <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?$i?>"><?$i?></option><? }; ?> 
 </select>
  
 		 
