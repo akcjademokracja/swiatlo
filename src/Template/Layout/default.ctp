@@ -7,7 +7,12 @@
     <title>
         Łańcuch Światła
     </title>
- 	
+ 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 	<meta name="description" content="Idea Łańcucha Światła rozlewa się po całej Polsce. W niedzielę i we wtorek głos setek tysięcy osób wybrzmiał w kilkudziesięciu miejscowościach w całej Polsce. Choć większość uwagi koncentrowała się na tym co działo się pod Pałacem Prezydenckim, sukces nie byłby możliwości dzięki mobilizacji obywatelek i obywateli w miasteczkach i miastach. 
 
 W czwartek chcemy wysunąć je na pierwszy plan. Wolne sądy to nie sprawa tylko Warszawy, ale wszystkich obywateli. To nie spór o władzę, a o to czy w sądach, zarówno tych mniejszych, rejonowych, jak i apelacyjnych, będą zapadać wyroki wolne od politycznych nacisków. 
