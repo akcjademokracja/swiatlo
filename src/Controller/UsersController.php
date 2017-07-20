@@ -17,7 +17,7 @@
 use App\Controller\AppController;
 use Cake\Event\Event;
 use Cake\Datasource\ConnectionManager; // This line is required
- use Cake\Cache\Cache;
+use Cake\Cache\Cache;
 
 class UsersController extends AppController
 {
@@ -108,23 +108,21 @@ $conn = ConnectionManager::get('default');
  
  
 
- $this->loadModel('Streams');
 
 	
 	if ($this->czlek['admin']==1) { 
 		
 		if ($_POST['funkcja']=='update') { 
+ $this->loadModel('Streams');
 	
 	$update=$conn->execute('UPDATE streams set '.$_POST['co'].'="'.addslashes($_POST['wartosc']).'" where id='.$_POST['id'].'');
-	$streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
-     Cache::write('streams', $streams);
+	
 		}
 		
 		if ($_POST['funkcja']=='usun') { 
  	$update=$conn->execute('DELETE FROM streams  where id='.$_POST['id'].'');
 
-$streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
-     Cache::write('streams', $streams);
+
   	 
 		}
 		
@@ -132,8 +130,7 @@ $streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolej
 			
 			 	$update=$conn->execute('UPDATE streams set active='.$_POST['co'].' where id='.$_POST['id'].''); 
 
- $streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
-     Cache::write('streams', $streams);
+ 
 
 		}
 		
@@ -141,8 +138,7 @@ $streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolej
 			
 			$update=$conn->execute("INSERT INTO streams set name='".addslashes($_POST['name'])."', address='".addslashes($_POST['address'])."', owners=2");
 
-			$streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
-     Cache::write('streams', $streams);
+			
 			
 		}
 		
@@ -154,8 +150,7 @@ foreach ($_POST['streamname'] as $key=>$value) {
 	$kolejnosc=$_POST['streamkolejnosc'][$key];
 	$update=$conn->execute("INSERT INTO streams set name='".addslashes($nazwa)."', address='".addslashes($adres)."', kolejnosc='".$kolejnosc."', owners=1");
 	
-}    $streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
-     Cache::write('streams', $streams);
+}    
 
 		}
 		

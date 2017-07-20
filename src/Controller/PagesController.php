@@ -19,6 +19,7 @@ use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
+use Cake\Cache\Cache;
 
 /**
  * Static content controller
