@@ -100,7 +100,8 @@ font-size:10px;
 	background:transparent;
 	border:1px solid #000;
 	height:30px;
-	width:150px;
+	width:170px;
+	font-size:12px;
 }
 </style>
 
@@ -122,7 +123,7 @@ font-size:10px;
 
 
 <? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
-	 <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
+	<input type="hidden" value="<?=$_GET['random']?>" id="random"> <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
