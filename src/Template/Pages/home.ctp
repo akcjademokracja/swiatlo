@@ -74,6 +74,7 @@ h1.navbar-brand {
 	display: inline-block;
 	white-space: nowrap;
 	margin-left: 20px;
+	color:
 }
 .losowo i {
 	color: #ccc;
@@ -97,8 +98,8 @@ font-size:12px;
  
 		 
 		 
-	 </div>
-	 <span class="losowo"><i class="flaticon-tick"></i> Losowo</span> 
+	 </div><? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
+	 <a class="losowo" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
@@ -248,9 +249,9 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
           <span aria-hidden="true">&times;</span>
         </button>
          </div>
-	        <div class="modal-body" id="">
+	        <div class="modal-body text-center" id="">
 		       
-		       
+		      <h5> 737 504 708</h5>
 		               
 	        </div>
 	      
