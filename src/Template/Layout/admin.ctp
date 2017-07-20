@@ -27,7 +27,7 @@
  <!-- Update your html tag to include the itemscope and itemtype attributes -->
    
 
- <? 
+ <?php 
   ?>
  <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimal-ui"><meta name="apple-mobile-web-app-capable" content="yes" />
   
@@ -35,8 +35,8 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-   <?= $this->Html->css('clearer.css') ?>
-  <?= $this->Html->css('layout.css') ?>
+   <?=$this->Html->css('clearer.css') ?>
+  <?=$this->Html->css('layout.css') ?>
   <link rel="stylesheet" href="/css/admin.css">
 
     <!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]--> 
@@ -104,8 +104,8 @@
 
 
 
-<? } ?>
-<? if ($dateskrypt) {?>
+<?php } ?>
+<?php if ($dateskrypt) {?>
 <link rel="stylesheet" href="/css/3rd/datepicker/bootstrap-datetimepicker.min.css">
 
 
@@ -238,13 +238,13 @@
 <script src="/js/3rd/fileupload/jquery.fileupload-ui.js"></script>
 
 
-<?
+<?php
   } ?>
-   <? if ($skrypt) { 
+   <?php if ($skrypt) { 
 	 foreach ($skrypt as $s) { 
 	 ?> <script language="javascript" type="text/javascript" src="/js/<?=$s?>.js"></script>
 
-<? } }; ?>
+<?php } }; ?>
 
 
  
