@@ -77,6 +77,13 @@ h1.navbar-brand {
 	color:#000;
 	font-size: 12px;
 }
+.losowo:hover {
+	text-decoration: none;
+	color:#
+}
+.losowo.active, .losowo.active i { 
+	color:#00880d;
+}
 .losowo i {
 	color: #ccc;
 font-size:12px;	
