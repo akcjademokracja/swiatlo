@@ -89,6 +89,9 @@ h1.navbar-brand {
 	color: #ccc;
 font-size:11px;	
 }
+#kontaktModalShow {
+	cursor: pointer;
+}
 </style>
 
 <nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded" style="padding: 0px 15px; background:#fff;">
