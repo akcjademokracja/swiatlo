@@ -105,7 +105,8 @@ function streamupdate() {
  
 // my_connection is defined in your database config
 $conn = ConnectionManager::get('default');
- 
+  $this->loadModel('Streams');
+
  
 
 
@@ -113,16 +114,17 @@ $conn = ConnectionManager::get('default');
 	if ($this->czlek['admin']==1) { 
 		
 		if ($_POST['funkcja']=='update') { 
- $this->loadModel('Streams');
 	
 	$update=$conn->execute('UPDATE streams set '.$_POST['co'].'="'.addslashes($_POST['wartosc']).'" where id='.$_POST['id'].'');
-	
+	$streams=$this->Streams->find()->where('')->order('Streams.kolejnosc asc');
+     Cache::write('streams', $streams);
 		}
 		
 		if ($_POST['funkcja']=='usun') { 
  	$update=$conn->execute('DELETE FROM streams  where id='.$_POST['id'].'');
 
-
+$streams=$this->Streams->find()->where('')->order('Streams.kolejnosc asc');
+     Cache::write('streams', $streams);
   	 
 		}
 		
@@ -130,14 +132,16 @@ $conn = ConnectionManager::get('default');
 			
 			 	$update=$conn->execute('UPDATE streams set active='.$_POST['co'].' where id='.$_POST['id'].''); 
 
- 
+ $streams=$this->Streams->find()->where('')->order('Streams.kolejnosc asc');
+     Cache::write('streams', $streams);
 
 		}
 		
 		if ($_POST['funkcja']=='useradd') { 
 			
 			$update=$conn->execute("INSERT INTO streams set name='".addslashes($_POST['name'])."', address='".addslashes($_POST['address'])."', owners=2");
-
+$streams=$this->Streams->find()->where('')->order('Streams.kolejnosc asc');
+     Cache::write('streams', $streams);
 			
 			
 		}
@@ -150,7 +154,8 @@ foreach ($_POST['streamname'] as $key=>$value) {
 	$kolejnosc=$_POST['streamkolejnosc'][$key];
 	$update=$conn->execute("INSERT INTO streams set name='".addslashes($nazwa)."', address='".addslashes($adres)."', kolejnosc='".$kolejnosc."', owners=1");
 	
-}    
+}    $streams=$this->Streams->find()->where('')->order('Streams.kolejnosc asc');
+     Cache::write('streams', $streams);
 
 		}
 		
