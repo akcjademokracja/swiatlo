@@ -84,6 +84,14 @@ h1.navbar-brand {
  	#top {
 	 	margin-top:100px;
  	}
+ 	.switcheswrap {
+	 	position: absolute;
+	 	top:70px;
+	 	left:0px;
+	 	right:0px;
+	 	height: 30px;
+	 	background: #fff;
+ 	}
 }
 .losowo {
 	display: inline-block;
@@ -115,6 +123,7 @@ font-size:10px;
 	font-size:12px;
 }
 
+
 </style>
 
 </head>
@@ -124,7 +133,7 @@ font-size:10px;
     <span class="navbar-toggler-icon"></span>
   </button>
    <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">#ŁańcuchŚwiatła</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
-    <div calss+"switcheswrap" style="width:300px"><div class="switches">
+    <div calss="switcheswrap" style="width:300px"><div class="switches">
 	 <select class="form-control" id="selectPieces">
   <option value="">Wszystkie transmisje</option>
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
