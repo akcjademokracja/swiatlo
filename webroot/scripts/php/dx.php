@@ -6,8 +6,7 @@ session_start();
   
 if ((isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
           $_SERVER['HTTP_X_REQUESTED_WITH']  == 'XMLHttpRequest') && (isset($_SESSION['Config']['userAgent']) && ($_SESSION['Config']['userAgent'])==$xdbf)) {
-          define('al', $_SESSION['al']);
-          
+           
           } else { echo 'nie';
  
 	          return;
