@@ -94,7 +94,9 @@ h1.navbar-brand {
 	 	white-space: nowrap;
  	}
  	.switches {
-	 	width:100%;
+float:left; 	}
+ 	.losowo {
+	 	float: right;
  	}
 }
 .switches, .switcheswrap {
