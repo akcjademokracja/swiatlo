@@ -51,18 +51,29 @@ class PagesController extends AppController
         }
         $page = $subpage = null;
 		$this->loadModel('Streams');
-		if ($_GET['pion']==1) { $where=''; } else { $where='Streams.active=1';};
-		if ($_GET['random']) { $order='RAND()'; } else { 
+	if ($_GET['pion']==1) { $where=''; $niemawhere=0; } else { $where='Streams.active=1'; $niemawhere=1; };
+		if ($_GET['random']) { $order='RAND()'; $niemawhere=0; } else { 
 			$order='Streams.kolejnosc asc';
 		}
-		
+		if (($ilestreams = Cache::read('ilestreams')) === false) {
 		$ilestreams=$this->Streams->find()->where(''.$where.'')->all();
+    Cache::write('ilestreams', $ilestreams);
+}
+
 		$this->set('ilestreams', $ilestreams);
-		$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
+		$streams = Cache::read('streams');
+		print_r($streams);
+		if (count($streams)==0 and $niemawhere==1) {
+ $streams=$this->Streams->find()->where('')->order(''.$order.'');
+     Cache::write('streams', $streams);
+}
+else { 
+			$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
+
+}
 		
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); }
-		$this->set('streams', $streams);
-        if (!empty($path[0])) {
+		$this->set('streams', $streams);        if (!empty($path[0])) {
             $page = $path[0];
         }
         if (!empty($path[1])) {
