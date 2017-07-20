@@ -76,10 +76,10 @@
 	var sid='<?=$sid?>';
 	var xdbf='<?=$xdbf?>';
 	</script>
- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-     <link href="/css/clearer.css" rel="stylesheet" type="text/css" />
+     <link href="../css/clearer.css" rel="stylesheet" type="text/css" />
 
 <? if ($addtextskrypt) { ?>
 
