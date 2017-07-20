@@ -63,8 +63,8 @@ class AppController extends Controller
      * @param \Cake\Event\Event $event The beforeRender event.
      * @return \Cake\Network\Response|null|void
      */
-    public function beforeFilter()
-    {     parent::beforeFilter();
+    public function beforeFilter(Event $event)
+    {    
 	    $this->Auth->allow();
  		$user = $this->Auth->user();
  
