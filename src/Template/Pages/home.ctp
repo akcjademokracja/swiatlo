@@ -79,10 +79,11 @@ h1.navbar-brand {
 }
 .losowo:hover {
 	text-decoration: none;
-	color:#
-}
-.losowo.active, .losowo.active i { 
 	color:#00880d;
+}
+.losowo.active, .losowo.active i, .losowo:hover, .losowo:hover i { 
+	color:#00880d;	text-decoration: none;
+
 }
 .losowo i {
 	color: #ccc;
