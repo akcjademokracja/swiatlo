@@ -132,7 +132,15 @@ font-size:10px;
 	width:170px;
 	font-size:12px;
 }
-
+.grid-item {
+	display:block; padding-left:0px; padding-right: 0px
+}
+.grid-item .videoWrap {
+	display: block;
+}
+.grid-item.inactive .videoWrap {
+	display: none;
+}
 
 </style>
 
@@ -227,7 +235,11 @@ font-size:10px;
     });
  FB.Event.subscribe('xfbml.ready', function(msg) {
   if (msg.type === 'video') { 
+	  
 	  $(document).ready(function() { 
+		  $(".grid").find('.grid-item:not(.inactive)').each(function() { 
+			  $(this).css({'height':$(this).height()});
+		  })
 $('.grid').masonry({
   // set itemSelector so .grid-sizer is not used in layout
   itemSelector: '.grid-item',
@@ -255,8 +267,8 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
 	 
 <div class="row justify-content-center grid"> 
 
-<?php  foreach ($streams as $stream) { $lg=4; if ($streamsow<9) { $lg=6; } else { $lg=4; } if ($_GET['small']==1) { $lg=4; }  ?>
-<div class="col-lg-<?php echo $lg; ?> col-md-6 col-12 grid-item" style="display:block; padding-left:0px; padding-right: 0px">
+<?php  foreach ($streams as $index=>$stream) { $lg=4; if ($streamsow<9) { $lg=6; } else { $lg=4; } if ($_GET['small']==1) { $lg=4; }  ?>
+<div class="col-lg-<?php echo $lg; ?> col-md-6 col-12 grid-item <? if ($index>10) { echo 'inactive'; } ?>" style="">
 	<div class="videoWrap"><div class="videoTitle"><?php echo $stream['name']; ?></div>
 	<div class="fb-video" data-href="<?php echo $stream['address']; ?>" data-show-text="false" data-autoplay="false">
  	</div>
