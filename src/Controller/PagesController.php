@@ -56,6 +56,9 @@ class PagesController extends AppController
 		if ($_GET['random']) { $order='RAND()'; $niemawhere=0; } else { 
 			$order='Streams.kolejnosc asc';
 		}
+		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
+    Cache::write('ilestreams', $ilestreams);
+    
 		if (($ilestreams = Cache::read('ilestreams')) === false) {
 		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
     Cache::write('ilestreams', $ilestreams);
