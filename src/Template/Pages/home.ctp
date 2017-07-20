@@ -263,7 +263,7 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
          </div>
 	        <div class="modal-body" id="dodajModalBody">
 		       <h5 style="font-weight: 300">Wklej poniżej adres transmisji LIVE na facebooku (pełny adres np. https://www.facebook.com/AkcjaDemokracja/videos/529232293867019 ) oraz miasto/lokalizację Łańcucha i kliknij DODAJ</h5><br/><strong>
-		       
+		       Jeśli możesz, dodaj do transmisji hashtag #ŁańcuchŚwiatłaPL
 		       </strong>
 		       <br/>
 		       <form id="dodajForm" action="javascript:sendForm()">
