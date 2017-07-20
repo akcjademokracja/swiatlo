@@ -84,10 +84,9 @@ else {
 */
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); $streamsow=$streams->count(); }
 		$this->set('streams', $streams);   
-/*
-		$streamsow=$streams->count();
+ 		$streamsow=$streams->count();
 		$this->set('streamsow', $streamsow); 
-*/     if (!empty($path[0])) {
+     if (!empty($path[0])) {
             $page = $path[0];
         }
         if (!empty($path[1])) {
