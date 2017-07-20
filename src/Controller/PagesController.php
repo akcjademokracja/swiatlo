@@ -56,14 +56,13 @@ class PagesController extends AppController
 			$order='Streams.kolejnosc asc';
 		}
 		if (($ilestreams = Cache::read('ilestreams')) === false) {
-		$ilestreams=$this->Streams->find()->where(''.$where.'')->all();
+		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
     Cache::write('ilestreams', $ilestreams);
 }
 
 		$this->set('ilestreams', $ilestreams);
 		$streams = Cache::read('streams');
-		print_r($streams);
-		if (count($streams)==0 and $niemawhere==1) {
+ 		if (count($streams)==0 and $niemawhere==1) {
  $streams=$this->Streams->find()->where('')->order(''.$order.'');
      Cache::write('streams', $streams);
 }
