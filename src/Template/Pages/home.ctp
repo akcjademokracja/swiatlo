@@ -74,7 +74,8 @@ h1.navbar-brand {
 	display: inline-block;
 	white-space: nowrap;
 	margin-left: 20px;
-	color:
+	color:#000;
+	font-size: 12px;
 }
 .losowo i {
 	color: #ccc;
