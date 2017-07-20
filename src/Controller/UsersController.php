@@ -161,7 +161,7 @@ foreach ($_POST['streamname'] as $key=>$value) {
  	$nazwa=$value;
 	$adres=$_POST['streamaddress'][$key];
 	$kolejnosc=$_POST['streamkolejnosc'][$key];
-	$update=$conn->execute("INSERT INTO streams set name='".addslashes($nazwa)."', address='".addslashes($adres)."', kolejnosc='".$kolejnosc."', owners=1, pion=0, active=1");
+	$update=$conn->execute("INSERT INTO streams set name='".addslashes($nazwa)."', address='".addslashes($adres)."', kolejnosc='".$kolejnosc."', owners=1, pion=0, active=1,stream_id=1");
 	
 }    
 $streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
