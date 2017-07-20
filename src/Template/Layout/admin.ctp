@@ -52,7 +52,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
      
 </head> 
-<? if ($nologin) { ?>
+<?php if ($nologin) { ?>
 <div class="container" style="margin-top:200px">
 		<div class="h2 text-center text-300">Zaloguj się</div>
 		
@@ -65,7 +65,7 @@
 	
 </form>
 	</div></div></div> 
-<? } else { ?>
+<?php } else { ?>
 <?=$this->element('header')?>
 <?=$this->fetch('content')?>
 <input id="sid" value="<?=$sid?>" type="hidden">
@@ -81,7 +81,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
      <link href="../css/clearer.css" rel="stylesheet" type="text/css" />
 
-<? if ($addtextskrypt) { ?>
+<?php if ($addtextskrypt) { ?>
 
   <link href="/css/3rd/froala/froala_editor.min.css" rel="stylesheet" type="text/css" />
   <link href="/css/3rd/froala/froala_style.min.css" rel="stylesheet" type="text/css" />
@@ -98,8 +98,8 @@
 <script src="/js/3rd/froala/plugins/media_manager.min.js"></script>
  <script src="/js/3rd/froala/plugins/video.min.js"></script> 
   <script src="/js/3rd/froala/plugins/icons1.js"></script> 
-<?} ?>
-<? if ($checkboxskrypt) {?>
+<?php } ?>
+<?php if ($checkboxskrypt) {?>
  <script src="/js/3rd/checkbox/bootstrap-checkbox.min.js"></script> 
 
 
@@ -114,8 +114,8 @@
  <script src="/js/3rd/datepicker/bootstrap-datetimepicker.js"></script> 
 
  
-<? } ?>
-  <? if ($addphotoskrypt) { 
+<?php } ?>
+  <?php if ($addphotoskrypt) { 
 	  ?>
 	  
 <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
