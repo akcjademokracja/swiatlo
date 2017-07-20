@@ -102,12 +102,15 @@ font-size:14px;
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
-	
-      <li class="nav-item active">
+	  <li class="nav-item">
+        <a class="nav-link" id="kontaktModalShow"  data-toggle="modal" data-target="#kontaktModal"   style="font-size: 12px">KONTAKT</a>
+      </li>
+      
+      <li class="nav-item">
         <a class="nav-link" href="	https://dzialaj.akcjademokracja.pl/campaigns/bronmy-sadow?utm_source=akcja&utm_medium=www&utm_campaign=swiatlo
 "    style="font-size: 12px">PODPISZ APEL</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/events/817454785083555/" target="_blank"  style="font-size: 12px">O AKCJI</a>
       </li>
 	</ul><!--
@@ -232,6 +235,30 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
 	      
   </div>
 </div>
+
+
+
+
+<div class="modal fade bd-example-modal" id="kontaktModal" tabindex="-1" role="dialog" aria-labelledby="kontaktModalShow" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+	      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">KONTAKT DLA MEDIÓW</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+         </div>
+	        <div class="modal-body" id="">
+		       
+		       
+		               
+	        </div>
+	      
+    </div>
+	      
+  </div>
+</div>
+
 
 
 
