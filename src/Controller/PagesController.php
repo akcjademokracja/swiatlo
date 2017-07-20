@@ -19,7 +19,6 @@ use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
-use Cake\Cache\Cache;
 
 /**
  * Static content controller
@@ -52,25 +51,14 @@ class PagesController extends AppController
         }
         $page = $subpage = null;
 		$this->loadModel('Streams');
-		if ($_GET['pion']==1) { $where=''; $niemawhere=1; } else { $where='Streams.active=1'; $niemawhere=0; };
-		if ($_GET['random']) { $order='RAND()'; $niemawhere=0; } else { 
+		if ($_GET['pion']==1) { $where=''; } else { $where='Streams.active=1';};
+		if ($_GET['random']) { $order='RAND()'; } else { 
 			$order='Streams.kolejnosc asc';
 		}
-		if (($ilestreams = Cache::read('ilestreams')) === false) {
-		$ilestreams=$this->Streams->find()->where(''.$where.'')->all();
-    Cache::write('ilestreams', $ilestreams);
-}
-
-		$this->set('ilestreams', $ilestreams);
 		
-		if (($streams = Cache::read('streams')) === false and $niemawhere==1) {
-				$streams=$this->Streams->find()->where('')->order(''.$order.'');
-     Cache::write('streams', $streams);
-}
-else { 
-			$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
-
-}
+		$ilestreams=$this->Streams->find()->where(''.$where.'')->all();
+		$this->set('ilestreams', $ilestreams);
+		$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
 		
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); }
 		$this->set('streams', $streams);
