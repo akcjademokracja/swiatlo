@@ -11,6 +11,39 @@
   src: 
          url('DINProCondensedBold.ttf')  format('truetype'), /* Safari, Android, iOS */
  }
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 20/07/2017 15:30
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("/img/font/Flaticon.eot");
+  src: url("/img/font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("/img/font/Flaticon.woff") format("woff"),
+       url("/img/font/Flaticon.ttf") format("truetype"),
+       url("/img/font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("/img/font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 0px;
+}
+
+.flaticon-tick:before { content: "\f100"; }
+
 
 h1.navbar-brand {
 	font-family: din;
@@ -42,10 +75,9 @@ h1.navbar-brand {
 	white-space: nowrap;
 	margin-left: 20px;
 }
-.losowo img {
-	fill: #ccc;
-	height:20px;
-	
+.losowo i {
+	color: #ccc;
+font-size:14px;	
 }
 </style>
 
@@ -66,7 +98,7 @@ h1.navbar-brand {
 		 
 		 
 	 </div>
-	 <span class="losowo"><img src="/img/tick.svg"> Losowo</span> 
+	 <span class="losowo"><i class="flaticon-tick"></i> Losowo</span> 
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
