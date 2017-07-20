@@ -56,8 +56,7 @@ class PagesController extends AppController
 		if ($_GET['random']) { $order='RAND()'; $niemawhere=0; } else { 
 			$order='Streams.kolejnosc asc';
 		}
-		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
-    Cache::write('ilestreams', $ilestreams);
+	 
     
 		if (($ilestreams = Cache::read('ilestreams')) === false) {
 		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
@@ -67,7 +66,7 @@ class PagesController extends AppController
 		$this->set('ilestreams', $ilestreams);
 		$streams = Cache::read('streams');
  		if (count($streams)==0 and $niemawhere==1) {
- $streams=$this->Streams->find()->where('')->order(''.$order.'');
+ $streams=$this->Streams->find()->where('Streams.active=1')->order(''.$order.'');
      Cache::write('streams', $streams);
 }
 else { 
@@ -75,8 +74,10 @@ else {
 
 }
 		
-		if ($_GET['streams']) { $streams->limit($_GET['streams']); }
-		$this->set('streams', $streams);        if (!empty($path[0])) {
+		if ($_GET['streams']) { $streams->limit($_GET['streams']); $streamsow=$streams->count(); }
+		$this->set('streams', $streams);   
+		$streamsow=$streams->count();
+		$this->set('streamsow', $streamsow);echo $streamsow;     if (!empty($path[0])) {
             $page = $path[0];
         }
         if (!empty($path[1])) {
