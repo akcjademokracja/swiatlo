@@ -65,12 +65,10 @@ class PagesController extends AppController
 }
 */
 		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
-    Cache::write('ilestreams', $ilestreams);
 
 		$this->set('ilestreams', $ilestreams);
 		
 					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
-     Cache::write('streams', $streams);
 
 /*
 		$streams = Cache::read('streams');
