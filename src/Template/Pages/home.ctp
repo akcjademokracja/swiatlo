@@ -127,6 +127,9 @@ font-size:10px;
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
+	<li class="nav-item">
+		<div class="fb-share-button" data-href="https://lancuchswiatla.pl" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flancuchswiatla.pl%2F&amp;src=sdkpreparse">Udostępnij</a></div>
+	</li>
 	  <li class="nav-item">
         <a class="nav-link" id="kontaktModalShow"  data-toggle="modal" data-target="#kontaktModal"   style="font-size: 12px">KONTAKT</a>
       </li>
