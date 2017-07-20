@@ -57,22 +57,19 @@ class PagesController extends AppController
 			$order='Streams.kolejnosc asc';
 		}
 	 
-/*
+ 
     
 		if (($ilestreams = Cache::read('ilestreams')) === false) {
 		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
     Cache::write('ilestreams', $ilestreams);
 }
-*/
-		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
-    Cache::write('ilestreams', $ilestreams);
+ 
+     Cache::write('ilestreams', $ilestreams);
 
 		$this->set('ilestreams', $ilestreams);
 		
-					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
-     Cache::write('streams', $streams);
-
-/*
+ 
+ 
 		$streams = Cache::read('streams');
  		if (($streams = Cache::read('streams')) === false and $niemawhere==1) {
  $streams=$this->Streams->find()->where('Streams.active=1')->order(''.$order.'');
@@ -83,7 +80,7 @@ else {
 
 }
 		
-*/
+ 
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); $streamsow=$streams->count(); }
 		$this->set('streams', $streams);   
 /*
