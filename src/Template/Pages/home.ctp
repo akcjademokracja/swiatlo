@@ -87,7 +87,7 @@ h1.navbar-brand {
 }
 .losowo i {
 	color: #ccc;
-font-size:11px;	
+font-size:10px;	
 }
 #kontaktModalShow {
 	cursor: pointer;
