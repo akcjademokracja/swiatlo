@@ -82,7 +82,7 @@ h1.navbar-brand {
 	 	padding-bottom: 20px;
  	} 
  	#top {
-	 	margin-top:100px;
+	 	margin-top:120px;
  	}
  	.switcheswrap {
 	 	position: absolute;
