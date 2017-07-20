@@ -38,8 +38,9 @@ h1.navbar-brand {
  	}
 }
 .losowo img {
-	fill: #999;
-	height:30px;
+	fill: #ccc;
+	height:20px;
+	
 }
 </style>
 
@@ -60,7 +61,7 @@ h1.navbar-brand {
 		 
 		 
 	 </div>
-	 <span class="losowo"><img src="/img/tick.svg">Losowo</span> 
+	 <span class="losowo"><img src="/img/tick.svg"> Losowo</span> 
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
