@@ -55,7 +55,7 @@ class PagesController extends AppController
 		if ($_GET['random']) { $order='RAND()'; } else { 
 			$order='Streams.kolejnosc asc';
 		}
-		$ilestreams=$this->Streams->find()->where(''.$where.'']);
+		$ilestreams=$this->Streams->find()->where(''.$where.'');
 		$this->set('ilestreams', $ilestreams);
 		$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
 		
