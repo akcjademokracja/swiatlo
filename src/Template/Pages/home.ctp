@@ -48,10 +48,10 @@ h1.navbar-brand {
 <div class="switches">
 	 <select class="selectpicker" id="selectPieces">
   <option>Wszystkie transmisje</option>
-   <option <? if ($_GET['streams']==6) { echo 'selected'; }; ?> value="6">6</option>
-  <option <? if ($_GET['streams']==12) { echo 'selected'; }; ?> value="12">12</option>
-  <option <? if ($_GET['streams']==18) { echo 'selected'; }; ?> value="18">18</option>
-  <option <? if ($_GET['streams']==24) { echo 'selected'; }; ?> value="24">24</option>
+   <option <?php if ($_GET['streams']==6) { echo 'selected'; }; ?> value="6">6</option>
+  <option <?php if ($_GET['streams']==12) { echo 'selected'; }; ?> value="12">12</option>
+  <option <?php if ($_GET['streams']==18) { echo 'selected'; }; ?> value="18">18</option>
+  <option <?php if ($_GET['streams']==24) { echo 'selected'; }; ?> value="24">24</option>
 </select>
  
 		 
