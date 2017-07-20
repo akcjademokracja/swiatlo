@@ -96,7 +96,7 @@ h1.navbar-brand {
      window.fbAsyncInit = function() {
 
      FB.init({
-      appId      : '629376240546354',
+      appId      : '104628140213092',
       xfbml      : true,
       version    : 'v2.10'
     });
