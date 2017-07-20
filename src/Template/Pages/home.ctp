@@ -37,6 +37,11 @@ h1.navbar-brand {
 	 	padding-bottom: 20px;
  	}
 }
+.losowo {
+	display: inline-block;
+	white-space: nowrap;
+	margin-left: 20px;
+}
 .losowo img {
 	fill: #ccc;
 	height:20px;
