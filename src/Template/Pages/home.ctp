@@ -57,7 +57,7 @@ h1.navbar-brand {
 		 
 		 
 	 </div>
-	 <span class="">Losowo</span> 
+	 <span class=""><img src="/img/tick.svg">Losowo</span> 
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
