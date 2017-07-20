@@ -59,6 +59,9 @@ h1.navbar-brand {
 	font-size: 40px;
 	padding: 0px;
 }
+#top {
+	margin-top: 70px;
+}
 @media (max-width:599px) { 
 	h1.navbar-brand {
 		font-size: 20px;
@@ -77,16 +80,9 @@ h1.navbar-brand {
  	}
  	#navbarSupportedContent {
 	 	padding-bottom: 20px;
- 	}
- 	.switches {
-	 	height: 30px;
-	 	position: absolute;
-	 	left:0px;
-	 	top:70px;
-	 	right:0px;
-	 	background: #fff;
-	 	z-index: 9999999;
-	 	text-align: center;
+ 	} 
+ 	#top {
+	 	margin-top:100px;
  	}
 }
 .losowo {
@@ -128,8 +124,7 @@ font-size:10px;
     <span class="navbar-toggler-icon"></span>
   </button>
    <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">#ŁańcuchŚwiatła</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
-   <div class="switcheswrap">
-   <div class="switches">
+    <div class="switches">
 	 <select class="form-control" id="selectPieces">
   <option value="">Wszystkie transmisje</option>
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
@@ -143,7 +138,7 @@ font-size:10px;
 	
 
 <? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
-	<input type="hidden" value="<?=$_GET['random']?>" id="random"> <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a></div>
+	<input type="hidden" value="<?=$_GET['random']?>" id="random"> <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
 	<li class="nav-item">
@@ -237,7 +232,7 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
    
 
  </script>
- <div class="container-fluid" style="margin-top: 70px;" id="top">
+ <div class="container-fluid" style="" id="top">
 	 
 <div class="row justify-content-center grid"> 
 
