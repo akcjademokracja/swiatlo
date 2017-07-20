@@ -282,8 +282,8 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
 	      
     </div>
 	      
-  </div>
-</div>
+  </div> 
+</div> 
 
 <div class="switches">
 	 <select class="selectpicker" id="selectPieces">
