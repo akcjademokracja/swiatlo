@@ -1,3 +1,8 @@
+ 
+	
+		
+  
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/tether.min.js"></script>
 
@@ -115,6 +120,8 @@ font-size:10px;
 }
 
 </style>
+
+</head>
 
 <nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded" style="padding: 0px 15px; background:#fff;">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
