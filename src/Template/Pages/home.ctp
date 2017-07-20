@@ -65,7 +65,7 @@ h1.navbar-brand {
 .switches, .switcheswrap {
 	white-space: nowrap;
 }
-@media (max-width:599px) { 
+@media (max-width:996px) { 
 	h1.navbar-brand {
 		font-size: 20px;
 	}
