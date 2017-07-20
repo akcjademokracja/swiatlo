@@ -62,6 +62,9 @@ h1.navbar-brand {
 #top {
 	margin-top: 70px;
 }
+.switches, .switcheswrap {
+	white-space: nowrap;
+}
 @media (max-width:599px) { 
 	h1.navbar-brand {
 		font-size: 20px;
@@ -99,9 +102,7 @@ float:left; 	}
 	 	float: right;
  	}
 }
-.switches, .switcheswrap {
-	white-space: nowrap;
-}
+
 .losowo {
 	display: inline-block;
 	white-space: nowrap;
