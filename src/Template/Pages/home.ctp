@@ -73,6 +73,16 @@ h1.navbar-brand {
  	#navbarSupportedContent {
 	 	padding-bottom: 20px;
  	}
+ 	.switches {
+	 	height: 30px;
+	 	position: absolute;
+	 	left:0px;
+	 	top:70px;
+	 	right:0px;
+	 	background: #fff;
+	 	z-index: 9999999;
+	 	text-align: center;
+ 	}
 }
 .losowo {
 	display: inline-block;
@@ -103,6 +113,7 @@ font-size:10px;
 	width:170px;
 	font-size:12px;
 }
+
 </style>
 
 <nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded" style="padding: 0px 15px; background:#fff;">
@@ -118,12 +129,12 @@ font-size:10px;
 </select>
  
 		 
-		 
-	 </div>
-
+		
 
 <? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
 	<input type="hidden" value="<?=$_GET['random']?>" id="random"> <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> 
+ 
+	 </div>
 
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
