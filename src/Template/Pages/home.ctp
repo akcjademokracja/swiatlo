@@ -104,7 +104,7 @@ font-size:10px;
   </button>
    <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">#ŁańcuchŚwiatła</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
    <div class="switches">
-	 <select class="" id="selectPieces">
+	 <select class="form-control" id="selectPieces">
   <option>Wszystkie transmisje</option>
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
    <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?$i?>"><?$i?></option><? }; ?> 
