@@ -91,12 +91,13 @@ h1.navbar-brand {
 	 	right:0px;
 	 	height: 30px;
 	 	background: #fff;
+	 	white-space: nowrap;
  	}
  	.switches {
 	 	width:100%;
  	}
 }
-.switches {
+.switches, .switcheswrap {
 	white-space: nowrap;
 }
 .losowo {
