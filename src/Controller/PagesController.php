@@ -76,12 +76,11 @@ class PagesController extends AppController
     Cache::write('ilestreams', $ilestreams);
 }
 */
-		$ilestreams=$this->Streams->find()->where('Streams.active=1')->all();
-
-		$this->set('ilestreams', $ilestreams);
+		 
 		
 					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
-
+$ilestreams=count($streams);
+$this->set('ilestreams', $ilestreams);
 /*
 		$streams = Cache::read('streams');
  		if (($streams = Cache::read('streams')) === false and $niemawhere==1) {
