@@ -66,7 +66,7 @@ class PagesController extends AppController
 		$this->loadModel('Streams');
 	if ($_GET['pion']==1) { $where=''; $niemawhere=0; } else { $where='Streams.active=1'; $niemawhere=1; };
 		if ($_GET['random']) { $order='RAND()'; $niemawhere=0; } else { 
-			$order='Streams.kolejnosc asc';
+			$order='Streams.kolejnosc desc';
 		}
 	 
 /*
@@ -100,7 +100,7 @@ else {
 			$this->paginate = [
         'limit' => $_SESSION['limit'],
         'order' => [
-            'Streams.kolejnosc' => 'asc'
+            'Streams.kolejnosc' => 'desc'
         ]
     ];
     $this->set('limit', $_SESSION['limit']);
