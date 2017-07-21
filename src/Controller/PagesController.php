@@ -78,7 +78,7 @@ class PagesController extends AppController
 */
 		 
 		
-					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'')->all()->toArray();
+					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'')->all();
 $ilestreams=$streams->count();
 $this->set('ilestreams', $ilestreams);
 /*
