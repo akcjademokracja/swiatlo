@@ -206,7 +206,7 @@ font-size:10px;
   <option value="16" <? if ($limit==16) { echo 'selected'; }; ?>>16 transmisji</option>
   <option value="24" <? if ($limit==24) { echo 'selected'; }; ?>>24 transmisje</option>
   <option value="30" <? if ($limit==30) { echo 'selected'; }; ?>>30 transmisji</option>
-  <option value="all" <? if ($limit=='all') { echo 'selected'; }; ?>>Wszystkie</option>
+  <option value="all" <? if ($limit=='all') { echo 'selected'; }; ?>>Wszystkie (<?=$ilestreams?>)</option>
 <!--
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
    <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?=$i?>"><?=$i?></option><? }; ?> 
