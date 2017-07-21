@@ -106,8 +106,11 @@ else {
     ];
     $this->set('limit', $_SESSION['limit']);
 	        $this->set('streams', $this->paginate($streams));
+	} else if ($lim) { 
+	        $this->set('streams', $streams);
 	} else { 
-		$this->set('streams', $streams);
+			        $this->set('streams', $this->paginate($streams));
+
 	}
 /*
 		$streamsow=$streams->count();
