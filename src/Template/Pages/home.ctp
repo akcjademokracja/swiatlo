@@ -193,19 +193,30 @@ font-size:10px;
    <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">#ŁańcuchŚwiatła</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
     <div calss="switcheswrap"><div class="switches">
 	 <select class="form-control" id="selectPieces">
-  <option value="">Wszystkie transmisje</option>
+   <option value="2" <? if ($limit==2) { echo 'selected'; }; ?>>2 transmisje</option>
+  <option value="6" <? if ($limit==6) { echo 'selected'; }; ?>>6 transmisji</option>
+
+ <option value="10" <? if ($limit==10 or !$limit) { echo 'selected'; }; ?>>10 transmisji</option>
+  <option value="16" <? if ($limit==16) { echo 'selected'; }; ?>>16 transmisji</option>
+  <option value="24" <? if ($limit==24) { echo 'selected'; }; ?>>24 transmisje</option>
+  <option value="30" <? if ($limit==30) { echo 'selected'; }; ?>>30 transmisji</option>
+  <option value="all" <? if ($limit=='all') { echo 'selected'; }; ?>>Wszystkie</option>
+<!--
   <? for ($i=1; $i<=count($ilestreams); $i++) { ?>
    <option <?php if ($_GET['streams']==$i) { echo 'selected'; }; ?> value="<?=$i?>"><?=$i?></option><? }; ?> 
+-->
 </select>
  
 		 
 	 
  
 	 </div>
+<!--
 	
 
 <? if ($_GET['streams']) { $streamsLink='&streams='.$_GET['streams'].''; }; if ($_GET['random']==1) { $klasa='active';  $randomLink='/?random=0'; } else { $randomLink='/?random=1'; }  ?>
-	<input type="hidden" value="<?=$_GET['random']?>" id="random"> <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a> </div>
+	<input type="hidden" value="<?=$_GET['random']?>" id="random"> <a class="losowo <?=$klasa?>" href="<?=$randomLink?><?=$streamsLink?>"><i class="flaticon-tick"></i> Losowo</a>
+--> </div>
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
 	<li class="nav-item">
@@ -455,7 +466,7 @@ $('.selectpicker').selectpicker('refresh');
 $("#selectPieces").on('change', function() { 
 	streams=$(this).val();
 	random=$("#random").val();
-	window.location.href="/?streams="+streams+"&random="+random;
+	window.location.href="/?elements="+streams;
 })
 })
 function sendForm() { 
