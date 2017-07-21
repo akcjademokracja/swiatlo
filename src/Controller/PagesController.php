@@ -79,7 +79,7 @@ class PagesController extends AppController
 		 
 		
 					$streams=$this->Streams->find()->where(''.$where.'')->order(''.$order.'');
-$ilestreams=$streams->count()
+$ilestreams=$streams->count();
 $this->set('ilestreams', $ilestreams);
 /*
 		$streams = Cache::read('streams');
