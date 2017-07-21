@@ -65,6 +65,46 @@ h1.navbar-brand {
 .switches, .switcheswrap {
 	white-space: nowrap;
 }
+
+ .pagination  { 
+	 margin-top: 50px;
+	 text-align: center;
+ }
+ .pagination li {
+	 display: inline-block;
+	 list-style: none;
+ }
+.pagination  li a {
+	display: inline-block;
+	width:50px;
+	height: 50px;
+	border-radius: 3px;
+	border:0px solid #000;
+	color:#000;
+	background: #efefef;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	margin: 0px 5px;
+}
+.pagination li.disabled {
+	display: none;
+}
+.pagination li.active a {
+	background: #333;
+ 	color:#fff;
+}
+.pagination li.first a,.pagination li.last a {
+	width: auto;
+	padding: 0px 10px;
+}
+.pagination  li a:hover {
+	text-decoration: none;
+	color:#fff;
+	background: #ccc;
+}
+
+
 @media (max-width:996px) { 
 	h1.navbar-brand {
 		font-size: 20px;
@@ -276,6 +316,19 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
  </div>
 </div></div>
 <?php }; ?></div>
+
+<ul class="pagination justify-content-center">
+    <?php
+    echo $this->Paginator->first(__('Początek', true), array('tag' => 'li', 'escape' => false), array('type' => "button", 'class' => "btn btn-default"));
+    echo $this->Paginator->prev('&laquo;', array('tag' => 'li', 'escape' => false), '<a href="#">&laquo;</a>', array('class' => 'prev disabled btn btn-default', 'tag' => 'li', 'escape' => false));
+    echo $this->Paginator->numbers(array('separator' => '', 'tag' => 'li', 'currentLink' => true, 'currentClass' => 'active', 'currentTag' => 'a'));
+    echo $this->Paginator->next('&raquo;', array('tag' => 'li', 'escape' => false), '<a href="#">&raquo;</a>', array('class' => 'prev disabled', 'tag' => 'li', 'escape' => false));
+    echo $this->Paginator->last(__('Koniec', true), array('tag' => 'li', 'escape' => false), array('type' => "button", 'class' => "btn btn-default"));
+    ?>
+</ul>
+
+
+
  </div>
 
 

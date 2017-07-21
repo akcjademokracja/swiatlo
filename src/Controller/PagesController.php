@@ -39,6 +39,18 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
+        public $paginate = [
+        'limit' => 8,
+        'order' => [
+            'Streams.kolejnosc' => 'asc'
+        ]
+    ];
+      public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('Paginator', ['templates' => 'paginator-templates']);
+   }
+   
     public function display()
     {
         $path = func_get_args();
@@ -83,7 +95,17 @@ else {
 		
 */
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); $streamsow=$streams->count(); }
-		$this->set('streams', $streams);   
+		if ($_GET['elements']=='all') { $_SESSION['limit']=''; } else if ($_GET['elements']) { $_SESSION['limit']=$_GET['elements']; };
+		if ($_SESSION['limit']) { 
+			$this->paginate = [
+        'limit' => $_SESSION['limit'],
+        'order' => [
+            'Streams.kolejnosc' => 'asc'
+        ]
+    ];
+    $this->set('limit', $_SESSION['limit']);
+		}
+        $this->set('streams', $this->paginate($streams));
 /*
 		$streamsow=$streams->count();
 		$this->set('streamsow', $streamsow); 
