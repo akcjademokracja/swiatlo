@@ -85,7 +85,8 @@ h1.navbar-brand {
 	font-size: 20px;
 	text-align: center;
 	line-height: 50px;
-	margin: 0px 5px;
+	margin: 5px 5px;
+	
 }
 .pagination li.disabled {
 	display: none;

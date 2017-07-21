@@ -95,7 +95,7 @@ else {
 		
 */
 		if ($_GET['streams']) { $streams->limit($_GET['streams']); $streamsow=$streams->count(); }
-		if ($_GET['elements']=='all') { $_SESSION['limit']='';   $lim='all';  $this->set('limit', $_SESSION['limit']);
+		if ($_GET['elements']=='all') { $_SESSION['limit']='';   $lim='all';  $this->set('limit', 'all');
  } else if ($_GET['elements']) { $_SESSION['limit']=$_GET['elements']; };
 		if ($_SESSION['limit'] and !$lim) { 
 			$this->paginate = [
