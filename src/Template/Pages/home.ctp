@@ -106,6 +106,11 @@ h1.navbar-brand {
 
 
 @media (max-width:996px) { 
+	.pagination {
+		max-width: 100%;
+		display: block;
+		text-align: center;
+	}
 	h1.navbar-brand {
 		font-size: 20px;
 	}
