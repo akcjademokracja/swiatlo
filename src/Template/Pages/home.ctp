@@ -237,9 +237,11 @@ font-size:10px;
   if (msg.type === 'video') { 
 	  
 	  $(document).ready(function() { 
+/*
 		  $(".grid").find('.grid-item:not(.inactive)').each(function() { 
 			  $(this).css({'height':$(this).height()});
 		  })
+*/
 $('.grid').masonry({
   // set itemSelector so .grid-sizer is not used in layout
   itemSelector: '.grid-item',
