@@ -495,13 +495,14 @@ $("#selectPieces").on('change', function() {
 })
 $(".broken-link").on('click', function() { 
 	id=$(this).attr('data-id');
+	co=$(this);
 	 $.ajax({
  				type: "post",
  				url: "/scripts/php/brokenLink.php", 
 				data: {id:id, sid:'<?=$sid?>',xdbf:'<?=$xdbf?>'},
 				dataType: 'json',
 				beforeSend: function() {
-					$(this).remove();
+					co.remove();
  				},
 				success: function(dane1){ 
  }} );   
