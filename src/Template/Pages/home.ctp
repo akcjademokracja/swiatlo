@@ -495,7 +495,7 @@ $(".broken-link").on('click', function() {
 	 $.ajax({
  				type: "post",
  				url: "/scripts/php/brokenLink.php", 
-				data: {id:id, sid:'<?=$sid?>',xdbf:'<?=$xdbf?>'
+				data: {id:id, sid:'<?=$sid?>',xdbf:'<?=$xdbf?>'},
 				dataType: 'json',
 				beforeSend: function() {
 					$(this).remove();
