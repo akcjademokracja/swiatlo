@@ -2,8 +2,7 @@
  
 
 	include('db.php');
-	include('dx.php'); 
-
+ 
 
 $stream=mysqli_fetch_array(mysqli_query($b2za, "SELECT * FROM  streams   where id='".$_POST['id']."'"));
  			 
