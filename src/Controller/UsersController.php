@@ -66,7 +66,7 @@ $this->set('nologin', 1);
 	      		      	$this->set('adminStreamsActive', 'active');
 
  	 $this->loadModel('Streams');  
-  $streams=$this->Streams->find()->where('Streams.owners=1')->order('Streams.kolejnosc asc')->all()->toArray();
+  $streams=$this->Streams->find()->where('')->order('Streams.kolejnosc asc')->all()->toArray();
 	 $this->set('streams', $streams);
 	 
 	 
