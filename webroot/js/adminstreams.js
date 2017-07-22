@@ -165,7 +165,7 @@ function showVideo(id, name) {
  				},
 				success: function(dane1){ 
 					$("#video").html(dane1);
-					
+					FB.XFBML.parse();
  
   				 }} );   
     
