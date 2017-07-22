@@ -187,6 +187,21 @@ font-size:10px;
 .grid-item.inactive .videoWrap {
 	display: none;
 }
+.broken-link {
+	position: absolute;
+	right:0px;
+	z-index: 999999999;
+	top:0px;
+	height: 44px;
+	padding: 0px 10px;
+	font-size: 18px;
+	background: #cc0000;
+	color:#fff;
+}
+.broken-link:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
 
 </style>
 
@@ -328,7 +343,7 @@ js.src = "https://connect.facebook.net/pl_PL/all.js";
 
 <?php  foreach ($streams as $index=>$stream) { $lg=4; if ($streamsow<9) { $lg=6; } else { $lg=4; } if ($_GET['small']==1) { $lg=4; }  ?>
 <div class="col-lg-<?php echo $lg; ?> col-md-6 col-12 grid-item" style="">
-	<div class="videoWrap"><div class="videoTitle"><?php echo $stream['name']; ?></div>
+	<div class="videoWrap"><div class="videoTitle"><?php echo $stream['name']; ?></div><? if ($user) { ?> <div class="broken-link" data-id="<?=$stream['id']?>">ZŁY</div><? }; ?>
 	<div class="fb-video" data-href="<?php echo $stream['address']; ?>" data-show-text="false" data-autoplay="false">
  </div>
 </div></div>
@@ -473,6 +488,21 @@ $("#selectPieces").on('change', function() {
 	streams=$(this).val();
 	random=$("#random").val();
 	window.location.href="/?elements="+streams;
+})
+$(".broken-link").on('click', function() { 
+	id=$(this).attr('data-id');
+	 $.ajax({
+ 				type: "post",
+ 				url: "/scripts/php/brokenLink.php", 
+				data: {id:id, sid:'<?=$sid?>',xdbf:'<?=$xdbf?>'
+				dataType: 'json',
+				beforeSend: function() {
+					$(this).remove();
+ 				},
+				success: function(dane1){ 
+ }} );   
+ 
+ 
 })
 })
 function sendForm() { 
