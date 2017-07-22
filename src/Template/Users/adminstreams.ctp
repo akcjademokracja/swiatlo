@@ -23,7 +23,7 @@
 	
 	<? foreach ($streams as $stream) { 
 	?>
-	<div class="row form-group streamrow <? if ($stream['owners']==2) { echo 'ciemniejsze'; } " id="streamRow<?=$stream['id']?>">
+	<div class="row form-group streamrow <? if ($stream['owners']==2) { echo 'ciemniejsze'; };?> " id="streamRow<?=$stream['id']?>">
 	<div class="col-md-5"><input placeholder="Nazwa" class="form-control toupdate" data-name="name" data-id="<?=$stream['id']?>" value="<?=$stream['name']?>"></div>
 	<div class='col-md-5'><input placeholder="Adres" class="form-control toupdate" data-name="address" data-id="<?=$stream['id']?>" value="<?=$stream['address']?>"></div>
 		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control toupdate" data-name="kolejnosc" data-id="<?=$stream['id']?>" value="<?=$stream['kolejnosc']?>"></div>
