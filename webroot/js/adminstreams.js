@@ -165,7 +165,19 @@ function showVideo(id, name) {
  				},
 				success: function(dane1){ 
 					$("#video").html(dane1);
-					
+					 var my_video_player;
+
+     window.fbAsyncInit = function() {
+
+     FB.init({
+      appId      : '104628140213092',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+ FB.Event.subscribe('xfbml.ready', function(msg) {
+	 
+	 });}
+
   				 }} );   
     
     
