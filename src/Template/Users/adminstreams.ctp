@@ -26,7 +26,10 @@
 	<div class="row form-group streamrow <? if ($stream['owners']==2) { echo 'ciemniejsze'; };?> " id="streamRow<?=$stream['id']?>">
 	<div class="col-md-5"><input placeholder="Nazwa" class="form-control toupdate" data-name="name" data-id="<?=$stream['id']?>" value="<?=$stream['name']?>"></div>
 	<div class='col-md-5'><input placeholder="Adres" class="form-control toupdate" data-name="address" data-id="<?=$stream['id']?>" value="<?=$stream['address']?>"></div>
-		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control toupdate" data-name="kolejnosc" data-id="<?=$stream['id']?>" value="<?=$stream['kolejnosc']?>"></div>
+		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control toupdate" data-name="kolejnosc" data-id="<?=$stream['id']?>" value="<?=$stream['kolejnosc']?>"><? if ($stream['broken']==1) { ?>
+		<span class="text-danger" style="font-weight: 700; font-size: 30px">!!!
+		
+		<? }; ?></div>
 
  	 
         <div class="col-md-1">
@@ -67,10 +70,7 @@
 	<div class="row form-group addstreamrow">
 	<div class="col-md-5"><input placeholder="Nazwa" class="form-control" name="streamname[]" data-name="name" data-id=""></div>
 	<div class='col-md-5'><input placeholder="Adres" class="form-control" data-name="address" name="streamaddress[]" data-id="" ></div>
-		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control" data-name="kolejnosc" name="streamkolejnosc[]" ><? if ($stream['broken']==1) { ?>
-		<span class="text-danger" style="font-weight: 700; font-size: 30px">!
-		
-		<? }; ?></div>
+		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control" data-name="kolejnosc" name="streamkolejnosc[]" ></div>
  <div class="col-md-1">
 		 		<button class="removerow btn btn-danger" ><i class="fa fa-remove"></i></button></div>
  </div>
