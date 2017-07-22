@@ -2,6 +2,29 @@
 	<div class="row">
 	 
 		<div class="col-md-12">
+			<form id="streamsform"> 	
+	
+	
+	
+	
+</form>
+
+ <div class="text-center margin-top-30">
+<button class="btn btn-success" id="dodajkolejne"><i class="fa fa-plus"></i> Dodaj kolejne</button>	
+	<button class="btn btn-primary btn-lg hide" onclick="javascript:zapiszStreamy()" data-html="true" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Trwa dodawanie'" data-complete-text="<i class='fa fa-check'></i> Dodane, przeładuję" id="zapiszdodane"><i class="fa fa-gavel"></i> Zapisz nowe streamy</button>	
+
+<div class="hide" id="dododania">
+	<div class="row form-group addstreamrow">
+	<div class="col-md-5"><input placeholder="Nazwa" class="form-control" name="streamname[]" data-name="name" data-id=""></div>
+	<div class='col-md-5'><input placeholder="Adres" class="form-control" data-name="address" name="streamaddress[]" data-id="" ></div>
+		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control" data-name="kolejnosc" name="streamkolejnosc[]" ></div>
+ <div class="col-md-1">
+		 		<button class="removerow btn btn-danger" ><i class="fa fa-remove"></i></button></div>
+ </div>
+ 
+
+ </div></div>
+ <br/><Br/>
 	<div class="inputNameWrap"><h1 class="">Streamy dodane przez nas i ludzi (ludzi szare)</h1></div>
  
  	<div class="row" style="background-color:#333; height:30px; line-height:30px; color:#fff; margin-bottom:20px;">
@@ -55,28 +78,7 @@
 				background:#efefef;
 			}
  </style>
-<form id="streamsform"> 	
-	
-	
-	
-	
-</form>
-
- <div class="text-center margin-top-30">
-<button class="btn btn-success" id="dodajkolejne"><i class="fa fa-plus"></i> Dodaj kolejne</button>	
-	<button class="btn btn-primary btn-lg hide" onclick="javascript:zapiszStreamy()" data-html="true" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Trwa dodawanie'" data-complete-text="<i class='fa fa-check'></i> Dodane, przeładuję" id="zapiszdodane"><i class="fa fa-gavel"></i> Zapisz nowe streamy</button>	
-
-<div class="hide" id="dododania">
-	<div class="row form-group addstreamrow">
-	<div class="col-md-5"><input placeholder="Nazwa" class="form-control" name="streamname[]" data-name="name" data-id=""></div>
-	<div class='col-md-5'><input placeholder="Adres" class="form-control" data-name="address" name="streamaddress[]" data-id="" ></div>
-		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control" data-name="kolejnosc" name="streamkolejnosc[]" ></div>
- <div class="col-md-1">
-		 		<button class="removerow btn btn-danger" ><i class="fa fa-remove"></i></button></div>
- </div>
- 
-
- </div></div></div>
+</div>
 	
 </div>
 </div>
