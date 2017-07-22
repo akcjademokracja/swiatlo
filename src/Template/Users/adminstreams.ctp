@@ -2,7 +2,7 @@
 	<div class="row">
 	 
 		<div class="col-md-12">
-	<div class="inputNameWrap"><h1 class="">Streamy dodane przez nass</h1></div>
+	<div class="inputNameWrap"><h1 class="">Streamy dodane przez nas i ludzi (ludzi szare)</h1></div>
  
  	<div class="row" style="background-color:#333; height:30px; line-height:30px; color:#fff; margin-bottom:20px;">
  		<div class="col-md-5">
