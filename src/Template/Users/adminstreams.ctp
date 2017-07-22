@@ -48,6 +48,9 @@
 			.streamrow.ciemniejsze {
 				background:#efefef;
 			}
+			.streamrow.ciemniejsze input {
+				background:#efefef;
+			}
  </style>
 <form id="streamsform"> 	
 	
