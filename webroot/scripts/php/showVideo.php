@@ -12,5 +12,4 @@ $stream=mysqli_fetch_array(mysqli_query($b2za, "SELECT * FROM  streams   where i
 <script>   
 		 
 	 </script>
-	 	<div class="fb-video" data-href="<?php echo $stream['address']; ?>" data-show-text="false" data-autoplay="false">
- </div>
+	 	<div class="fb-video" data-href="<?php echo $stream['address']; ?>" data-show-text="false" data-autoplay="false"></div>
