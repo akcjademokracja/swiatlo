@@ -166,7 +166,13 @@ function showVideo(id, name) {
 				success: function(dane1){ 
 					$("#video").html(dane1);
 					 var my_video_player;
-
+(function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/pl_PL/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
      window.fbAsyncInit = function() {
 
      FB.init({
@@ -177,13 +183,7 @@ function showVideo(id, name) {
  FB.Event.subscribe('xfbml.ready', function(msg) {
 	 
 	 });}
- (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-js.src = "https://connect.facebook.net/pl_PL/all.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+ 
   				 }} );   
     
     
