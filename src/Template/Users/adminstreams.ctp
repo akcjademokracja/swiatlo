@@ -30,7 +30,7 @@
 
  	 
         <div class="col-md-2 text-right"><? if ($stream['broken']==1) { ?>
-		<span class="text-danger" style="font-weight: 700; font-size: 30px">!</span>
+		<span class="text-danger" style="font-weight: 700; font-size: 20px">!</span>
 		
 		<? }; ?>
 				<button class="btn btn-primary btn-sm" onclick="javascript:showVideo(<?=$stream['id']?>, '<?=$stream['name']?>')"><i class="fa fa-search-plus"></i></button>
