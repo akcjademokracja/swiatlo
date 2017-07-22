@@ -148,3 +148,26 @@ function zapiszStreamy() {
     
     
 }
+
+
+
+
+function showVideo(id) { 
+	$("#video").html('wczytywanie');
+	$('#videoModal').modal('show')
+
+ $.ajax({
+ 				type: "post",
+ 				url: "/scripts/php/showVideo.php", 
+				data: {id:id}, 
+ 				beforeSend: function() {
+ 				},
+				success: function(dane1){ 
+					$("#video").html(dane1);
+					
+  				 }} );   
+    
+    
+}
+
+

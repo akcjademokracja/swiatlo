@@ -26,10 +26,11 @@
 	<div class="row form-group streamrow <? if ($stream['owners']==2) { echo 'ciemniejsze'; };?> " id="streamRow<?=$stream['id']?>">
 	<div class="col-md-5"><input placeholder="Nazwa" class="form-control toupdate" data-name="name" data-id="<?=$stream['id']?>" value="<?=$stream['name']?>"></div>
 	<div class='col-md-5'><input placeholder="Adres" class="form-control toupdate" data-name="address" data-id="<?=$stream['id']?>" value="<?=$stream['address']?>"></div>
-		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control toupdate" style="width: 90%" data-name="kolejnosc" data-id="<?=$stream['id']?>" value="<?=$stream['kolejnosc']?>"><? if ($stream['broken']==1) { ?>
+		<div class="col-md-1"><input placeholder="Kolejnosc" class="form-control toupdate" style="width: 70%" data-name="kolejnosc" data-id="<?=$stream['id']?>" value="<?=$stream['kolejnosc']?>"><? if ($stream['broken']==1) { ?>
 		<span class="text-danger" style="font-weight: 700; font-size: 30px">!
 		
-		<? }; ?></div>
+		<? }; ?>
+		<button class="btn btn-primary" onclick="javascript:showVideo(<?=$stream['id']?>)"><i class="fa fa-zoom"></i></button></div>
 
  	 
         <div class="col-md-1">
@@ -79,4 +80,28 @@
  </div></div></div>
 	
 </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="oakcjiShow" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+	      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+         </div>
+	        <div class="modal-body">
+		        <div id="video"></div>
+	        </div>
+	      
+    </div>
+	      
+  </div>
 </div>
