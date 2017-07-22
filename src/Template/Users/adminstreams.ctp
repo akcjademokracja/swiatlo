@@ -30,7 +30,7 @@
 		<span class="text-danger" style="font-weight: 700; font-size: 30px">!
 		
 		<? }; ?>
-		<button class="btn btn-primary btn-sm" onclick="javascript:showVideo(<?=$stream['id']?>)"><i class="fa fa-zoom"></i></button></div>
+		<button class="btn btn-primary btn-sm" onclick="javascript:showVideo(<?=$stream['id']?>, '<?=$stream['name']?>')"><i class="fa fa-zoom"></i></button></div>
 
  	 
         <div class="col-md-1">

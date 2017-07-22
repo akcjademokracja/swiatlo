@@ -152,7 +152,8 @@ function zapiszStreamy() {
 
 
 
-function showVideo(id) { 
+function showVideo(id, name) { 
+	$("#videoModalLabel").html(name);
 	$("#video").html('wczytywanie');
 	$('#videoModal').modal('show')
 
