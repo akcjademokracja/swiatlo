@@ -60,6 +60,29 @@ $this->set('nologin', 1);
     {
         return $this->redirect($this->Auth->logout());
     }
+    
+    
+
+  function events($id) { 
+	      	if ($this->czlek) { 	
+	      	$this->layout='admin';
+	      		      	$this->set('eventsActive', 'active');
+
+ 	 $this->loadModel('Events');  
+  $events=$this->Events->find()->order('Events.kolejnosc desc')->all()->toArray();
+	 $this->set('events', $events);
+	 
+	 
+	  $skrypt=array('adminevents');
+	    $this->set('skrypt', $skrypt);
+	    
+	     }
+ 	    else { $this->layout='admin';
+$this->set('nologin', 1); }
+    }
+    
+    
+    
            function adminstreams($id) { 
 	      	if ($this->czlek) { 	
 	      	$this->layout='admin';

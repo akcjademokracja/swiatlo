@@ -55,6 +55,7 @@ Router::scope('/', function (RouteBuilder $routes) {
  	$routes->connect('/users/streamupdate', ['controller' => 'Users', 'action' => 'streamupdate']);
  	$routes->connect('/users/eventupdate', ['controller' => 'Users', 'action' => 'eventupdate']);
  	$routes->connect('/panel/userstreams', ['controller' => 'Users', 'action' => 'userstreams']);
+ 	$routes->connect('/panel/events', ['controller' => 'Users', 'action' => 'events']);
 
 
     /**
