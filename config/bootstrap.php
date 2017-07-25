@@ -222,3 +222,5 @@ Type::build('timestamp')
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
+require('/scripts/php/Facebook/autoload.php' );
+

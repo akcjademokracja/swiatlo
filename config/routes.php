@@ -53,6 +53,7 @@ Router::scope('/', function (RouteBuilder $routes) {
  	$routes->connect('/panel', ['controller' => 'Users', 'action' => 'adminstreams']);
  	$routes->connect('/users/login', ['controller' => 'Users', 'action' => 'login']);
  	$routes->connect('/users/streamupdate', ['controller' => 'Users', 'action' => 'streamupdate']);
+ 	$routes->connect('/users/eventupdate', ['controller' => 'Users', 'action' => 'eventupdate']);
  	$routes->connect('/panel/userstreams', ['controller' => 'Users', 'action' => 'userstreams']);
 
 

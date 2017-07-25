@@ -176,6 +176,113 @@ $streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolej
 }
 
 
+
+
+
+
+
+
+
+function eventupdate() { 
+		$this->autoRender = false;
+ 
+// my_connection is defined in your database config
+$conn = ConnectionManager::get('default');
+  $this->loadModel('Events');
+$fb = new Facebook\Facebook([
+  'app_id'                => '629376240546354',
+  'app_secret'            => '2a9e30283480c33aa4f295b98a959d64',
+  'default_graph_version' => 'v2.10',
+]);
+
+ 
+
+
+	
+	if ($this->czlek['admin']==1) { 
+		
+		if ($_POST['funkcja']=='update') { 
+	
+	$update=$conn->execute('UPDATE events set '.$_POST['co'].'="'.addslashes($_POST['wartosc']).'" where id='.$_POST['id'].'');
+	$events=$this->Events->find()->where('Events.active=1')->order('Events.kolejnosc asc');
+     Cache::write('events', $events);
+	 $ileevents=$this->Streams->find()->where('Events.active=1')->all();
+    Cache::write('ileevents', $ileevents);
+
+	}
+		
+		if ($_POST['funkcja']=='usun') { 
+ 	$update=$conn->execute('DELETE FROM events  where id='.$_POST['id'].'');
+$events=$this->Events->find()->where('Events.active=1')->order('Events.kolejnosc asc');
+     Cache::write('events', $events);
+	 $ileevents=$this->Streams->find()->where('Events.active=1')->all();
+    Cache::write('ileevents', $ileevents);
+
+		}
+		
+		if ($_POST['funkcja']=='active') { 
+			
+			 	$update=$conn->execute('UPDATE events set active='.$_POST['co'].' where id='.$_POST['id'].''); 
+$events=$this->Events->find()->where('Events.active=1')->order('Events.kolejnosc asc');
+     Cache::write('events', $events);
+	 $ileevents=$this->Streams->find()->where('Events.active=1')->all();
+    Cache::write('ileevents', $ileevents);
+    		}
+		
+		if ($_POST['funkcja']=='useradd') { 
+			
+			$update=$conn->execute("INSERT INTO events set name='".addslashes($_POST['name'])."', address='".addslashes($_POST['address'])."', owners=2");
+$events=$this->Events->find()->where('Events.active=1')->order('Events.kolejnosc asc');
+     Cache::write('events', $events);
+	 $ileevents=$this->Streams->find()->where('Events.active=1')->all();
+    Cache::write('ileevents', $ileevents);
+
+			
+		}
+		
+		if ($_POST['funkcja']=='add') { 
+			
+foreach ($_POST['eventid'] as $key=>$value) { 
+	
+	try {
+  // Get the \Facebook\GraphNodes\GraphUser object for the current user.
+  // If you provided a 'default_access_token', the '{access-token}' is optional.
+  $response = $fb->get('/'.$value.'', '104628140213092|s0QxRJeKfpogy5p8eR4wecXpF8o');
+} catch(\Facebook\Exceptions\FacebookResponseException $e) {
+  // When Graph returns an error
+  echo 'Graph returned an error: ' . $e->getMessage();
+  exit;
+} catch(\Facebook\Exceptions\FacebookSDKException $e) {
+  // When validation fails or other local issues
+  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+  exit;
+}
+
+$me = $response->getGraphUser();
+echo 'Logged in as ' . $me->getName();
+
+/*
+
+ 	$nazwa=$value;
+ 	
+ 	
+ 		$update=$conn->execute("INSERT INTO events set name='".addslashes($nazwa)."', address='".addslashes($adres)."', kolejnosc='".$kolejnosc."', owners=1, pion=0, active=1,stream_id=1");
+	
+*/
+}    
+$streams=$this->Streams->find()->where('Streams.active=1')->order('Streams.kolejnosc asc');
+     Cache::write('streams', $streams);
+
+		}
+		
+	}
+	
+	
+	
+}
+
+
+
     /* SLIDES */
     
   function slides() { 
