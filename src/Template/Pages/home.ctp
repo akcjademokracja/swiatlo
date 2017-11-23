@@ -215,7 +215,7 @@ font-size:10px;
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-   <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none">Demonstracje 3xW</a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
+   <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none"><img src="/img/3xw-overlay.jpg" style="height:70px"/></a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
     <div calss="switcheswrap"><div class="switches">
 	 <select class="form-control" id="selectPieces">
    <option value="2" <? if ($limit==2) { echo 'selected'; }; ?>>2 transmisje</option>
