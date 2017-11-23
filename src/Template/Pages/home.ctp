@@ -245,18 +245,18 @@ font-size:10px;
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
 	<li class="nav-item">
-		<div class="fb-share-button" data-href="https://lancuchswiatla.pl" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/events/387934381638269/">Udostępnij</a></div>
+		<div class="fb-share-button" data-href="https://3xw.eu" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/events/387934381638269/">Udostępnij</a></div>
 	</li>
 	  <li class="nav-item">
         <a class="nav-link" id="kontaktModalShow"  data-toggle="modal" data-target="#kontaktModal"   style="font-size: 12px">KONTAKT</a>
       </li>
 
       <li class="nav-item">
-                                                                                                                                                                      <a class="nav-link" href="http://www.akcjademokracja.pl/3xw/"  style="font-size: 12px">Komunikat prasowy</a>
+                                                                                                                                                                      <a class="nav-link" href="http://www.akcjademokracja.pl/3xw-komunikat/"  style="font-size: 12px">Komunikat prasowy</a>
       </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/events/817454785083555/" target="_blank"  style="font-size: 12px">O AKCJI</a>
-      </li>-->
+      <li class="nav-item">
+                                                                                                                                                                      <a class="nav-link" href="https://www.facebook.com/events/387934381638269" target="_blank"  style="font-size: 12px">O AKCJI</a>
+      </li>
 	</ul><!--
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
