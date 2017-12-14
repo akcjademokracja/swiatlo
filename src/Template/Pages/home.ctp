@@ -1,8 +1,3 @@
-
-
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/tether.min.js"></script>
 
@@ -215,7 +210,7 @@ font-size:10px;
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-   <h1 class="navbar-brand mb-0"><a href="#top" style="color:#000; text-decoration: none"><img src="/img/3xw-overlay.jpg" style="height:70px"/></a> <a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
+   <h1 class="navbar-brand mb-0"><a href="http://akcjademokracja.pl"><img src="/img/logoAkcja.png" style="height: 70px"></a></h1>
     <div calss="switcheswrap"><div class="switches">
 	 <select class="form-control" id="selectPieces">
    <option value="2" <? if ($limit==2) { echo 'selected'; }; ?>>2 transmisje</option>
@@ -245,17 +240,17 @@ font-size:10px;
   <div class="collapse navbar-collapse float-right ml-auto" id="navbarSupportedContent">
 <ul class="navbar-nav ml-auto mr-1 float-right">
 	<li class="nav-item">
-		<div class="fb-share-button" data-href="https://3xw.eu" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/events/387934381638269/">Udostępnij</a></div>
+		<div class="fb-share-button" data-href="https://3xw.eu" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/events/2069200656644256/">Udostępnij</a></div>
 	</li>
 	  <li class="nav-item">
         <a class="nav-link" id="kontaktModalShow"  data-toggle="modal" data-target="#kontaktModal"   style="font-size: 12px">KONTAKT</a>
       </li>
 
       <li class="nav-item">
-                                                                                                                                                                      <a class="nav-link" href="http://www.akcjademokracja.pl/3xw-komunikat/"  style="font-size: 12px">Komunikat prasowy</a>
+                                                                                                                                                                      <a class="nav-link" href="http://www.akcjademokracja.pl/lancuch-swiatla-wraca-w-czwartek-znow-demonstracje-w-calej-polsce-i-pod-palacem-prezydenckim/"  style="font-size: 12px">Komunikat prasowy</a>
       </li>
       <li class="nav-item">
-                                                                                                                                                                      <a class="nav-link" href="https://www.facebook.com/events/387934381638269" target="_blank"  style="font-size: 12px">O AKCJI</a>
+                                                                                                                                                                      <a class="nav-link" href="https://www.facebook.com/events/2069200656644256/" target="_blank"  style="font-size: 12px">O AKCJI</a>
       </li>
 	</ul><!--
     <ul class="navbar-nav mr-auto">
